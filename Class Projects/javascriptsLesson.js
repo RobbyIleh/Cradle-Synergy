@@ -110,15 +110,84 @@ console the name of the month
 
 
 
-var a;
+// var a;
 
-a = "true";
+// a = "true";
 
-if (a){
-  console.log("true");
-}else{
-  console.log(" False")
+// if (a){
+//   console.log("true");
+// }else{
+//   console.log(" False")
+// }
+
+
+// creating function inside an array
+
+/*var classArray = [23, 21, 33, 27, 28, 20, 20, 16];
+
+
+
+
+studentScore = classArray.map(bonusMark)
+console.log(studentScore);
+
+function bonusMark(x){
+return (x + 5);
+}*/
+
+var account = {
+  balance: 500,
+  name: "Robby Ileh",
+  Account: "0718292992",
+
+  checkBalance: function(){
+    console.log(this.balance);
+   
+  },
+
+  withdraw: function(amount){
+    if(this.balance < amount){
+    this.balance = this.balance - amount;
+    console.log("Widthrawing....")
+    console.log("Your new account balance is " + this.balance)
+  }
+  else{
+    console.log("Insufficient fund")
+  }
+
+},
+
+deposit: function(amount){
+  this.balance = this.balance + amount;
+  console.log("Depositing " +"‎₦" + amount);
+  console.log("Your new account balance is " +"‎₦" + this.balance);
 }
+}
+
+account.withdraw(100);
+account.deposit(400);
+
+
+
+
+/* create an object of a car which will include the name, brand, fuelCapacity, then create a method
+that will add fuel to the engine*/
+
+var Car = {
+  Name: Venza,
+  Brand: Toyota,
+  fuelCapacity: 100,
+
+  fuelTopUp: function(ltrs) {
+    this.fuelCapacity = this.fuelCapacity + ltrs;
+  
+    }  
+}
+car.fuelTopUp(10);
+
+
+
+
 
 
 
